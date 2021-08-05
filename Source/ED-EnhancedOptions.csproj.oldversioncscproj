@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D2EFD840-6AC1-44A9-86A7-4E81AC7BDF96}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EnhancedDevelopment.EnhancedOptions</RootNamespace>
+    <AssemblyName>ED-EnhancedOptions</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony" />
+    <Reference Include="Assembly-CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="UnityEngine.IMGUIModule" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Detours\PatchBuildingTrap.cs" />
+    <Compile Include="Detours\PatchBuildingTurretGun.cs" />
+    <Compile Include="Detours\PatchCompBreakdownable.cs" />
+    <Compile Include="Detours\PatchCompSchedule.cs" />
+    <Compile Include="Detours\PatchDebug.cs" />
+    <Compile Include="Detours\PatchFireWatcher.cs" />
+    <Compile Include="Detours\PatchLetterStack.cs" />
+    <Compile Include="Detours\PatchMainTabsRoot.cs" />
+    <Compile Include="Detours\PatchPlant.cs" />
+    <Compile Include="Detours\PatchPowerNetGraphics.cs" />
+    <Compile Include="Detours\PatchPreventGreatMemoryTrait.cs" />
+    <Compile Include="Detours\PatchRoofCollapseBuffer.cs" />
+    <Compile Include="Detours\PatchSkillRecord.cs" />
+    <Compile Include="Detours\PatchSkillUI.cs" />
+    <Compile Include="Detours\PatchTimeControls.cs" />
+    <Compile Include="Detours\PatchTimeSlower.cs" />
+    <Compile Include="Detours\TexButton.cs" />
+    <Compile Include="Detours\TimeControls.cs" />
+    <Compile Include="ModSettings_EnhancedOptions.cs" />
+    <Compile Include="Mod_EnhancedOptions.cs" />
+    <Compile Include="Patch.cs" />
+    <Compile Include="Patcher.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
